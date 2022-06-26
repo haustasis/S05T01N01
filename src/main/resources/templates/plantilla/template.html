@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
 <meta charset="UTF-8">
 <title>CRUD Sucursales</title>
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
 </head>
 <body>
 	<!-- BARRA DE NAVEGACION -->
@@ -25,7 +25,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 							<li class="nav-item"><a class="nav-link active"
-								aria-current="page" href="#">Inicio</a></li>
+								aria-current="page" th:href="@{/index}">Inicio</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">Sucursales</a></li>
 						</ul>
 					</div>
@@ -42,7 +42,7 @@
 		<div class="container">
 			<p>Copyright haustasis &copy; -2022</p>
 		</div>
-		<script type="text/javscript" th:src="@{/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javscript" th:src="@{js/bootstrap.bundle.min.js"></script>
 	</footer>
 </body>
 </html>
