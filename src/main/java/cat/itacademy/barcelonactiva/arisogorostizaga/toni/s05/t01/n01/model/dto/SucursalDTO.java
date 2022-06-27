@@ -1,10 +1,12 @@
 package cat.itacademy.barcelonactiva.arisogorostizaga.toni.s05.t01.n01.model.dto;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-public class SucursalDTO {
+public class SucursalDTO implements Serializable {
 
+	private static final long serialVersionUID = 2L;
 	private Integer pk_SucursalID;
 	private String nomSucursal;
 	private String paisSucursal;
@@ -28,6 +30,12 @@ public class SucursalDTO {
 		this.paisos = paisos;
 	}
 
+	public SucursalDTO(String nomSucursal, String paisSucursal, String tipusSucursal) {
+		super();
+		this.nomSucursal = nomSucursal;
+		this.paisSucursal = paisSucursal;
+		this.tipusSucursal = tipusSucursal;
+	}
 
 	public Integer getPk_SucursalID() {
 		return pk_SucursalID;

@@ -2,6 +2,7 @@ package cat.itacademy.barcelonactiva.arisogorostizaga.toni.s05.t01.n01.model.ser
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,20 +63,26 @@ public class SucursalServiceImpl implements SucursalService {
 
 	@Override
 	public SucursalDTO getOne(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		SucursalDTO sucursalDTO = new SucursalDTO();
+		Optional<Sucursal> sucursal = sucursalRepo.findById(id);
+		if (sucursal.isPresent()) {
+			sucursalDTO = this.convertEntityToDTO(sucursal.get());
+		}
+
+		return sucursalDTO;
 	}
 
 	@Override
 	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-
+		sucursalRepo.deleteById(id);
 	}
 
 	@Override
-	public void add(SucursalDTO sucursal) {
-		// TODO Auto-generated method stub
+	public void add(SucursalDTO sucursalDTO) {
+		sucursalRepo.save(convertDTOtoEntity(sucursalDTO));
 
 	}
+	
+
 
 }

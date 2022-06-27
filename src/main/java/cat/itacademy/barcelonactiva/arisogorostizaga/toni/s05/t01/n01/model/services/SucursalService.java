@@ -12,7 +12,6 @@ public interface SucursalService {
 	public List<SucursalDTO> getAll();
 	public SucursalDTO getOne(Integer id);
 	public void delete(Integer id);
-	public void add(SucursalDTO sucursal);
-	
+	public void add(SucursalDTO sucursalDTO);
 
 }

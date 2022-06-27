@@ -1,5 +1,7 @@
 package cat.itacademy.barcelonactiva.arisogorostizaga.toni.s05.t01.n01.model.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "sucursales")
-public class Sucursal {
+public class Sucursal implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer pk_SucursalID;
@@ -28,6 +32,12 @@ public class Sucursal {
 	public Sucursal(Integer pk_SucursalID, String nomSucursal, String paisSucursal) {
 		super();
 		this.pk_SucursalID = pk_SucursalID;
+		this.nomSucursal = nomSucursal;
+		this.paisSucursal = paisSucursal;
+	}
+	
+	public Sucursal(String nomSucursal, String paisSucursal) {
+		super();
 		this.nomSucursal = nomSucursal;
 		this.paisSucursal = paisSucursal;
 	}
