@@ -1,12 +1,10 @@
 package cat.itacademy.barcelonactiva.arisogorostizaga.toni.s05.t01.n01.model.dto;
 
-import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-public class SucursalDTO implements Serializable {
+public class SucursalDTO {
 
-	private static final long serialVersionUID = 2L;
 	private Integer pk_SucursalID;
 	private String nomSucursal;
 	private String paisSucursal;
