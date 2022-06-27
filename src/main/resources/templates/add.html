@@ -32,6 +32,7 @@
 					<form th:action="@{/sucursal/add}" th:object="${add}" method="POST">
 						<div class="form-group">
 							<label>Nombre Sucursal : </label>
+							<input type="hidden" name="pk_SucursalID" th:field="*{pk_SucursalID}"/>
 							<input type="text" name="nombre" th:field="*{nomSucursal}" class="form-control" placeholder="Nombre Sucursal" required>
 						</div>
 						<br>

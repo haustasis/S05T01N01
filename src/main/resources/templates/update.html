@@ -29,9 +29,10 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
 				<h1 class="text-center">Edición de Sucursal</h1>
 				<div class="card-body">
-					<form th:action="@{/sucursal/update/{id}(id=${update.id})}" th:object="${update}" method="POST">
+					<form th:action="@{/sucursal/add}" th:object="${update}" method="POST">
 						<div class="form-group">
 							<label>Nombre Sucursal : </label>
+							<input type="hidden" name="pk_SucursalID" th:field="*{pk_SucursalID}"/>
 							<input type="text" name="nombre" th:field="*{nomSucursal}" class="form-control" placeholder="Nombre Sucursal" required>
 						</div>
 						<br>

@@ -17,7 +17,7 @@ public class SucursalController {
 	@Autowired
 	private SucursalService sucursalService;
 	
-	@GetMapping({"/sucursal/getAll", "/"})
+	@GetMapping({"/sucursal/getAll", "/sucursal","/"})
 	public String getAll(Model model) {
 		model.addAttribute("getAll", sucursalService.getAll());
 		return "getAll";
